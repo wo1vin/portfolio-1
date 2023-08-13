@@ -4,15 +4,22 @@ import Eye from './blinking-eye.gif';
 
 function Button(){
   return <button 
-    style={{background:'black'}}
 
-    onMouseOver={()=>{ 
-
-      document.querySelector("button").style.background = `#000 url("${Eye}") -35px -75px no-repeat`
-    }}
+  // onMouseOver={()=>{ 
+  //   document.querySelector("button").style = {
+  //     "background" : `#000 url("${Eye}") -35px -75px no-repeat`,
+  //   }
+  // }}
+  //   onMouseLeave={()=>{ 
+  //     document.querySelector("button").style = {
+  //       "background" : "black",
+  //       // "transition" : " 2s ease-in 2s", 
+  //     }
+      // document.getElementById("peek").innerText = "Take a peek"
+    //}} 
+    
     >
-
-    <p>Take a peek</p>
+    <p className='flip-out-hor-bottom' id="peek">Take a peek</p>
   </button>
 }
 
