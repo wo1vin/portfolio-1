@@ -17,7 +17,6 @@ function Button(){
   //     }
       // document.getElementById("peek").innerText = "Take a peek"
     //}} 
-    
     >
     <p className='flip-out-hor-bottom' id="peek">Take a peek</p>
   </button>
@@ -33,6 +32,9 @@ function App() {
   return <div>
       <Header />
       <Intro />
+      <section>
+        <Project />
+      </section>
   </div>
 }
 
@@ -53,6 +55,24 @@ function Intro(){
         <Button />
       </div>
     </section>
+}
+
+function Project(){
+  return <article>
+    <header>
+      <div>
+        <h3>Project Name</h3>
+        <span>Short description</span>
+      </div>
+      <div>
+        <p>The why of the project, what you did.</p>
+        <a href='#'>Link &#8594;</a>
+      </div>
+    </header>
+    <div>
+      <h3>Stock images of widescreen and mobile views of the project</h3>
+    </div>
+  </article>
 }
 
 export default App;

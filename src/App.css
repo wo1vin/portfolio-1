@@ -62,15 +62,16 @@ button:hover{
   background:#000 url(./blinking-eye.gif) -35px -75px no-repeat;
 }
 .flip-out-hor-bottom:hover {
- 	-webkit-animation: flip-out-hor-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: flip-out-hor-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+ 	-webkit-animation: flip-out-hor-bottom 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: flip-out-hor-bottom 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          /* 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;} */
 }
 #peek{
   width: inherit;
   height: inherit;
   line-height: 3.75rem;
   margin: 0;
-  transition: animation 4s ease 1s; 
+  /* transition: animation 4s ease 1s;  */
   font-weight: 600;
   font-size: 1.25rem;
   text-decoration: underline white solid 2px;
