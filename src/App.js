@@ -1,17 +1,10 @@
 import React from 'react';
 import './App.css';
-// import Embed from 'react-embed';
-// import Eye from './blinking-eye.gif';
 
 function Button(props){
   return <button className={props.type}>
     <p className={props.animate} >{props.text}</p>
   </button>
-}
-
-{/* eslint-disable-next-line */}
-function Link({text,link}){
-  return <a href={link}>{text}</a>
 }
 
 function Header(){
@@ -31,25 +24,15 @@ function App() {
       </section>
       <section className='outro'>
         <Button className='toTop' arrow='&#8594;' />
-        {/* <img src={require('./Unsplash-NightSky.jpg')} alt="night sky full of stars"></img> */}
-        {/* <embed url="https://unsplash.com/photos/cs0sK0gzqCU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/> */}
       </section>
       <section className='footer'>
         <a href="https://wo1vin.github.io/Portfolio/services.html" 
-          className='creator'>Del Monte
-        </a>
-        {/* <img src={require('./Unsplash-NightSky.jpg')} alt="night sky full of stars"></img> */}
-        {/* <embed url="https://unsplash.com/photos/cs0sK0gzqCU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/> */}
+          className='creator'>Del Monte</a>
       </section>
   </div>
 }
 
 function Intro(){  
-    // const [view,setView] = useState("black")
-
-    // function handleMouseOver(){
-    //   setView("#000 url(../public/blinking-eye.gif) -35px -75px no-repeat")
-    // }
     return <section className="intro">
   
       <div className="visualContainer">
