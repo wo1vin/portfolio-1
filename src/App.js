@@ -1,25 +1,17 @@
 import React from 'react';
 import './App.css';
-import Eye from './blinking-eye.gif';
+// import Embed from 'react-embed';
+// import Eye from './blinking-eye.gif';
 
-function Button(){
-  return <button 
-
-  // onMouseOver={()=>{ 
-  //   document.querySelector("button").style = {
-  //     "background" : `#000 url("${Eye}") -35px -75px no-repeat`,
-  //   }
-  // }}
-  //   onMouseLeave={()=>{ 
-  //     document.querySelector("button").style = {
-  //       "background" : "black",
-  //       // "transition" : " 2s ease-in 2s", 
-  //     }
-      // document.getElementById("peek").innerText = "Take a peek"
-    //}} 
-    >
-    <p className='flip-out-hor-bottom' id="peek">Take a peek</p>
+function Button(props){
+  return <button className={props.type}>
+    <p className={props.animate} >{props.text}</p>
   </button>
+}
+
+{/* eslint-disable-next-line */}
+function Link({text,link}){
+  return <a href={link}>{text}</a>
 }
 
 function Header(){
@@ -31,9 +23,23 @@ function Header(){
 function App() {  
   return <div>
       <Header />
-      <Intro />
-      <section>
+      <Intro className="fade-in-bottom"/>
+      <section className='projects'>
         <Project />
+        <Project />
+        <Project />
+      </section>
+      <section className='outro'>
+        <Button className='toTop' arrow='&#8594;' />
+        {/* <img src={require('./Unsplash-NightSky.jpg')} alt="night sky full of stars"></img> */}
+        {/* <embed url="https://unsplash.com/photos/cs0sK0gzqCU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/> */}
+      </section>
+      <section className='footer'>
+        <a href="https://wo1vin.github.io/Portfolio/services.html" 
+          className='creator'>Del Monte
+        </a>
+        {/* <img src={require('./Unsplash-NightSky.jpg')} alt="night sky full of stars"></img> */}
+        {/* <embed url="https://unsplash.com/photos/cs0sK0gzqCU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/> */}
       </section>
   </div>
 }
@@ -52,7 +58,7 @@ function Intro(){
   
       <div>
         <h2>Est nulla fugiat minim amet non nisi.Dolor elit aliqua laboris irure do labore deserunt ullamco.</h2>
-        <Button />
+        <Button text='Take a peek' type='eye' animate='flip-out-hor-bottom'/>
       </div>
     </section>
 }
@@ -66,7 +72,8 @@ function Project(){
       </div>
       <div>
         <p>The why of the project, what you did.</p>
-        <a href='#'>Link &#8594;</a>
+        {/* eslint-disable-next-line */}
+        <a href='#' className='links'>Link &#8594;</a>
       </div>
     </header>
     <div>
@@ -74,5 +81,6 @@ function Project(){
     </div>
   </article>
 }
+
 
 export default App;
