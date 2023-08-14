@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import './App.css';
 
 function Button(props){
@@ -7,19 +7,26 @@ function Button(props){
   </button>
 }
 
-function Header(){
+function Header(props){
   return <header className="fade-in-bottom">
-    <h1>Denisse Del Monte</h1>
+    <h1>{props.text}</h1>
   </header>
 }
 
 function App() {  
   return <div>
-      <Header />
+      <Header text='Denisse Del Monte' />
       <Intro className="fade-in-bottom"/>
       <section className='projects'>
-        <Project />
-        <Project />
+        <Header text='Projects'></Header>
+        <Project 
+          title='THE ART LOUNGE' 
+          product='Social Platform' 
+          description='The Art Lounge is a web app where users can post their art and receive constructive criticism and appreciation with a focus on improving their skills.'
+          link='https://artlounge.cyclic.app/'
+          image='https://github.com/wo1vin/Portfolio/blob/main/images/ArtLounge.gif?raw=true'
+          altText='recording of the art lounge website demo' 
+          techUsed={['JavaScript','BootStrap','Node','Express']}/>
         <Project />
       </section>
       <section className='outro'>
@@ -46,24 +53,56 @@ function Intro(){
     </section>
 }
 
-function Project(){
+function Project(props){ 
   return <article>
     <header>
       <div>
-        <h3>Project Name</h3>
-        <span>Short description</span>
+        <h3>{props.title}</h3>
+        <span>{props.product}</span>
       </div>
       <div>
-        <p>The why of the project, what you did.</p>
+        <p>{props.description}</p>
         {/* eslint-disable-next-line */}
-        <a href='#' className='links'>Link &#8594;</a>
+        <a href={props.link} className='linkBtn'>Link &#8594;</a>
       </div>
     </header>
     <div>
-      <h3>Stock images of widescreen and mobile views of the project</h3>
+      <img src={props.image} alt={props.altText} ></img>
+      <div className='tech'>
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>{props.techUsed}</li>
+        </ul>
+      </div>
+      {/* replace gif with stock images of widescreen and mobile views of the project [0]
+      [
+    "JavaScript",
+    "NootStrap",
+    "node",
+    "Express"
+]*/}
     </div>
   </article>
 }
+// function Stack(props){
+  // props.techArr.forEach(d => {
+  //   let newEl = createElement('li',`${d}`)
+  //   console.log(newEl)
+  //   document.querySelector('ul').addChild(newEl)
+  // })
+  
+  // console.log(props.techArr)
+
+  // for(let i = 0; i < ; i++){
+  //   document.querySelector('ul')
+  // }
+
+  // return <div className='tech'>
+  //       <h3>Tech Stack</h3>
+  //       <ul>
+         
+           
+
 
 
 export default App;

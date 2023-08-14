@@ -41,11 +41,12 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 8rem 0;
 }
 .visualContainer,.intro h2{
   width: 40vw;
 }
-button{
+button, .linkBtn{
   width: 10rem;
   height: 4rem;
   border: none;
@@ -55,6 +56,9 @@ button{
   border-radius: .75rem;
   color: white;
   background: black -35px -75px;
+}
+button:hover{
+  cursor: pointer;
 }
  .eye:hover {
   background:#000 url(./blinking-eye.gif) -35px -75px no-repeat;
@@ -68,6 +72,48 @@ button p{
   font-weight: 600;
   font-size: 1.25rem;
   text-decoration: underline white solid 2px;
+ }
+ .linkBtn{
+  padding: .8rem 1.25rem;
+  width: auto;
+  height: auto;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  float: right;
+ }
+ article{
+  border-radius: 2rem;
+  border: 2px solid #000;
+  width: 80vw;
+  margin: 2rem 10vw;
+ }
+ article header div{
+  width: 40%;
+ }
+ article p,article h3{
+  text-align: right;
+  margin-bottom: .5rem;
+ }
+ article header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  padding-top: 2rem;
+ }
+ article>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 0 4rem 0;
+ }
+ article img{
+  width: 50%;
+  height: 50%;
+  border: 2px solid black;
+ }
+ article h3{
+  padding-right: 3rem;
  }
  .outro{
   width: 100vw;
