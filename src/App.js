@@ -40,7 +40,7 @@ function App() {
 }
 
 function Intro(){  
-    return <section className="intro">
+    return <section className="intro fade-in-bottom">
   
       <div className="visualContainer">
         <h2>Future visual goes here</h2>
