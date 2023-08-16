@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import './App.css';
 
 function Button(props){
@@ -14,8 +14,6 @@ function Header(props){
 }
 
 function App() {  
-  // const tech=['JavaScript','BootStrap','Node','Express']
-
   return <div>
       <Header text='Denisse Del Monte' />
       <Intro className="fade-in-bottom"/>
@@ -65,10 +63,10 @@ function App() {
           title='CLARITY COUNSELING' 
           product='Business Website' 
           description='Webpage for a dedicated licensed therapist. Their clean and refined page continues to bring them more clients than they can manage.'
-          link='https://wo1vin.github.io/BethelArtStudio/'
-          image='https://wo1vin.github.io/Portfolio/images/BAS.gif'
-          altText='recording of the Bethel Art Studio website demo' 
-          tech1='JavaScript' tech2='CSS' tech3='Coolors'/>
+          link='https://claritycounseling.llc/'
+          image='https://github.com/wo1vin/portfolio-1/blob/main/src/ClarityCounselingllc.gif?raw=true'
+          altText='recording of the Clarity Counseling website demo' 
+          tech1='JavaScript' tech2='Tailwind' tech3='Netlify'/>
       </section>
       <section className='outro'>
         <Button className='toTop' arrow='&#8594;' />
@@ -92,14 +90,23 @@ function Intro(){
   
       <div>
         <h2>Hi! I'm Denisse Del Monte, but you can call me Scar.<br/> Welcome to my site! Come check out what I've been working on.</h2>
-        <Button text='Take a peek' type='eye' animate='flip-out-hor-bottom'/>
+        {/* <svg width="1000" height="500">
+          <defs>
+            <filter id="filter" height="2" width="2">
+              <feTurbulence baseFrequency="0.2" numOctaves="3" type="fractalNoise" />
+              <feDisplacementMap  scale="80"  xChannelSelector="R" in="SourceGraphic" />
+            </filter>
+          </defs>
+          <path d="m 100 100 l 200 10" stroke="red" stroke-width="20" style={{filter:"url(#filter)"}}/>
+        </svg> */}
+        <Button text='Take a peek' type='eye' animate='flip-out-hor-bottom' spin='App-logo' url='#project'/>
       </div>
     </section>
 }
 
 function Project(props){ 
   
-  return <article>
+  return <article className='slit-in-horizontal'>
     <header>
       <div>
         <h3>{props.title}</h3>
@@ -114,7 +121,7 @@ function Project(props){
     <div>
       <img src={props.image} alt={props.altText} ></img>
       <div className='tech'>
-        <h3>Tech Stack</h3>
+        <h4>Tech Stack</h4>
         <ul>
           <li>{props.tech1}</li>
           <li>{props.tech2}</li>
@@ -126,25 +133,5 @@ function Project(props){
     </div>
   </article>
 }
-// function Stack(props){
-  // props.techArr.forEach(d => {
-  //   let newEl = createElement('li',`${d}`)
-  //   console.log(newEl)
-  //   document.querySelector('ul').addChild(newEl)
-  // })
-  
-  // console.log(props.techArr)
-
-  // for(let i = 0; i < ; i++){
-  //   document.querySelector('ul')
-  // }
-
-  // return <div className='tech'>
-  //       <h3>Tech Stack</h3>
-  //       <ul>
-         
-           
-
-
 
 export default App;
