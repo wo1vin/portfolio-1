@@ -1,6 +1,7 @@
 /* LAYOUT:
 ANIMATION
 GLOBAL
+  BUTTON
 HEADER
 INTRO
 PROJECT
@@ -104,22 +105,23 @@ h1, .creator{
 }
 h2{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-header{
-  margin-top: 3rem;
-  padding: 1rem 3rem;
-  text-align: center;
+a{
+  display: inline-block;
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: rgb(233, 160, 160);
+  margin: .25rem 0 0 0;
+  text-decoration: none;
 }
-.intro{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 8rem 0;
+a:hover{ 
+  background-color: yellow;
+  color: black;
+  border: 2px dashed black;
+  transition: all 1s ease-out;
 }
-.visualContainer,.intro h2{
-  width: 40vw;
-}
+/* Button */
 button, .linkBtn{
   width: 10rem;
   height: 4rem;
@@ -134,14 +136,6 @@ button, .linkBtn{
 button:hover{
   cursor: pointer;
 }
- .eye:hover {
-  background:#000 url(./blinking-eye.gif) -35px -75px no-repeat;
-  border: 2px solid #000;
-}
-.eye:hover .flip-out-hor-bottom{
- 	-webkit-animation: flip-out-hor-bottom .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: flip-out-hor-bottom .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
 button p{
   font-weight: 600;
   font-size: 1.25rem;
@@ -155,11 +149,58 @@ button p{
   text-decoration: none;
   float: right;
  }
+
+/* HEADER*/
+header{
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  text-align: center;
+}
+/* intro */
+.intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 8rem 0;
+}
+.intro>div{
+  width: 40vw;
+}
+.visualContainer{
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+iframe{
+  border: none;
+  border-radius: 1rem;
+}
+ .eye:hover {
+  background:#000 url(./blinking-eye.gif) -35px -75px no-repeat;
+  border: 2px solid #000;
+}
+.eye:hover .flip-out-hor-bottom{
+ 	-webkit-animation: flip-out-hor-bottom .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: flip-out-hor-bottom .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.projects h1,.projects h3{
+  margin-top: 0;
+}
  article{
   border-radius: 2rem;
   border: 2px solid #000;
   width: 80vw;
   margin: 2rem 10vw;
+  padding: 2rem;
+ }
+ article header{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
  }
  article h3{
   margin-bottom: .25rem;
@@ -174,30 +215,30 @@ button p{
  article p{
   font-size: .85 rem;
  }
- article header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: left;
-  padding-top: 2rem;
- }
- 
  article .linkBtn{
   margin-top: .5rem;
  }
  article>div{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  margin: 0 0 4rem 0;
+  justify-content: space-between;
+  margin: 2rem 0 0 0;
  }
  article img{
+  position: relative;
+  left: 25%;
+  object-fit: scale-down;
   width: 50%;
-  height: 50%;
+  height: auto;
   border: 2px solid black;
  }
- .tech {
-  padding-right: 3rem;
+ ul{
+  list-style: none;
+  text-align: right;
+  margin-top: .5rem;
+ }
+ li{
+  margin-bottom: .25rem;
  }
  .outro{
   width: 100vw;
